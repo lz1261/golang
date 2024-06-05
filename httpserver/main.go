@@ -41,7 +41,7 @@ func rootHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("entering root handler")
 	user := r.URL.Query().Get("user")
 	if user != "" {
-		io.WriteString(w, fmt.Sprintf("hello [%s]\n", user))
+		io.WriteString(w, fmt.Sprintf("Hello [%s]\n", user))
 	} else {
 		io.WriteString(w, "hello [stranger]\n")
 	}
